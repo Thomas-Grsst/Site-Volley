@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volley Pro - Équipement de Volley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu latéral -->
+    <div class="menu" id="menu">
+        <button class="close-menu" onclick="closeMenu()">×</button>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#ballons">Ballons</a></li>
+            <li><a href="#chaussures">Chaussures</a></li>
+            <li><a href="#genouilleres">Genouillères</a></li>
+            <li><a href="#manchons">Manchons</a></li>
+        </ul>
+    </div>
+
+    <!-- Bouton hamburger -->
+    <button class="hamburger" onclick="openMenu()">☰</button>
+
+    <!-- Contenu principal -->
+    <header class="acc" id="home">
+        <div class="overlay">
+            <h1>Équipement de Volley Professionnel</h1>
+        </div>
+    </header>
+
+    <section id="products" class="products">
+        <h2>Nos Produits</h2>
+        <div class="product-grid">
+            <div class="product" id="ballons">
+                <img src="images/ballonmikasa.jpg" alt="Ballon de volley classique">
+                <h3>Ballon de Volley (Classique)</h3>
+                <p>Idéal pour les entraînements et compétitions amateurs.</p>
+                <span>30€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="images/ballonmolten.jpg" alt="Ballon de volley pro">
+                <h3>Ballon de Volley (Pro)</h3>
+                <p>Conçu pour les matchs professionnels.</p>
+                <span>50€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+            </div>
+            <div class="product" id="chaussures">
+                <img src="images/chaussuresblanc.jpg" alt="Chaussures de volley homme">
+                <h3>Chaussures Homme</h3>
+                <p>Performance et confort sur le terrain.</p>
+                <span>70€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="images/chaussuresrouges.jpg" alt="Chaussures de volley femme">
+                <h3>Chaussures Femme</h3>
+                <p>Conçues pour un maintien optimal.</p>
+                <span>70€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="images/chaussuresbleu.jpg" alt="Chaussures de volley femme">
+                <h3>Chaussures Femme</h3>
+                <p>Conçues pour un maintien optimal.</p>
+                <span>70€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+            </div>
+            <div class="product" id="genouilleres">
+                <img src="images/genouilleres.jpg" alt="Genouillères">
+                <h3>Genouillères</h3>
+                <p>Protection essentielle pour vos genoux.</p>
+                <span>25€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+            </div>
+            <div class="product" id="manchons">
+                <img src="images/manchons.jpg" alt="Manchons de volley">
+                <h3>Manchons de Volley</h3>
+                <p>Protection idéale pour les avant-bras.</p>
+                <span>20€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <a href="panier.html" class="cart-button">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+    
+
+    <footer>
+        <h3 id="contact">Contactez-nous</h3>
+        <p>Email : contact@volleypro.fr | Téléphone : 01 23 45 67 89</p>
+        <p>© 2024 Volley Pro - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        function openMenu() {
+            document.getElementById("menu").style.width = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("menu").style.width = "0";
+        }
+    </script>
+</body>
+</html>
