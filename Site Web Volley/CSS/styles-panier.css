@@ -1,0 +1,65 @@
+/* Style général de la page panier */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Contenu du panier */
+#cart-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cart-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-content li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-content li:last-child {
+    border-bottom: none;
+}
+
+/* Résumé du panier */
+#cart-summary {
+    background-color: #fff3e0;
+    padding: 20px;
+    border: 1px solid #ffcc80;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cart-summary p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#cart-summary button {
+    background-color: hsl(45, 81%, 50%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#cart-summary button:hover {
+    background-color: hsl(45, 81%, 50%);
+}

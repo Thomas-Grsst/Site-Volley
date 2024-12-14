@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'identifier</title>
+    <link rel="stylesheet" href="CSS/styles-ident.css">
+</head>
+<body>
+    <header>
+        <h1>S'identifier</h1>
+    </header>
+    <main>
+        <!-- Connexion -->
+        <section>
+            <h2>Connexion</h2>
+            <form id="login-form">
+                <label for="login-email">Email :</label>
+                <input type="email" id="login-email" required />
+                <label for="login-password">Mot de passe :</label>
+                <input type="password" id="login-password" required />
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+        <hr />
+        <!-- Création de compte -->
+        <section>
+            <h2>Créer un compte</h2>
+            <form id="register-form">
+                <label for="register-email">Email :</label>
+                <input type="email" id="register-email" required />
+                <label for="register-password">Mot de passe :</label>
+                <input type="password" id="register-password" required />
+                <label for="confirm-password">Confirmer le mot de passe :</label>
+                <input type="password" id="confirm-password" required />
+                <button type="submit">Créer un compte</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

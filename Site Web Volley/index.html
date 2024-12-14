@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volley Pro - Équipement de Volley</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
+
     <!-- Menu latéral -->
     <div class="menu" id="menu">
         <button class="close-menu" onclick="closeMenu()">×</button>
-        <ul>
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#ballons">Ballons</a></li>
-            <li><a href="#chaussures">Chaussures</a></li>
-            <li><a href="#genouilleres">Genouillères</a></li>
-            <li><a href="#manchons">Manchons</a></li>
-        </ul>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#products" class="dropbtn">Produits</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#ballons">• Ballons</a></li>
+                        <li><a href="#chaussures">• Chaussures</a></li>
+                        <li><a href="#genouilleres">• Genouillères</a></li>
+                        <li><a href="#manchons">• Manchons</a></li>
+                    </ul>
+                </li>
+                <li><a href="panier.html">Panier</a></li>
+                <li><a href="identification.html">S'identifier</a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- Bouton hamburger -->
@@ -33,59 +43,59 @@
         <h2>Nos Produits</h2>
         <div class="product-grid">
             <div class="product" id="ballons">
-                <img src="images/ballonmikasa.jpg" alt="Ballon de volley classique">
-                <h3>Ballon de Volley (Classique)</h3>
+                <img src="images/ballonmikasa.jpg" alt="Ballon de volley pro">
+                <h3>Ballon de Volley (Pro)</h3>
                 <p>Idéal pour les entraînements et compétitions amateurs.</p>
-                <span>30€</span>
-                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+                <span>50€</span>
+                <button class="add-to-cart" data-name="Ballon de Volley (Pro)" data-price="50">Ajouter au panier</button>
             </div>
             <div class="product">
-                <img src="images/ballonmolten.jpg" alt="Ballon de volley pro">
-                <h3>Ballon de Volley (Pro)</h3>
+                <img src="images/ballonmolten.jpg" alt="Ballon de volley classique">
+                <h3>Ballon de Volley (Classique)</h3>
                 <p>Conçu pour les matchs professionnels.</p>
-                <span>50€</span>
+                <span>30€</span>
                 <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
             </div>
             <div class="product" id="chaussures">
                 <img src="images/chaussuresblanc.jpg" alt="Chaussures de volley homme">
-                <h3>Chaussures Homme</h3>
+                <h3>Chaussures Homme Blanche</h3>
                 <p>Performance et confort sur le terrain.</p>
                 <span>70€</span>
-                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+                <button class="add-to-cart" data-name="Chaussures Homme Blanche" data-price="70">Ajouter au panier</button>
             </div>
             <div class="product">
-                <img src="images/chaussuresrouges.jpg" alt="Chaussures de volley femme">
-                <h3>Chaussures Femme</h3>
+                <img src="images/chaussuresrouges.jpg" alt="Chaussures de volley mixte">
+                <h3>Chaussures Mixte Rouges</h3>
                 <p>Conçues pour un maintien optimal.</p>
                 <span>70€</span>
-                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+                <button class="add-to-cart" data-name="Chaussures Mixte Rouges" data-price="70">Ajouter au panier</button>
             </div>
             <div class="product">
                 <img src="images/chaussuresbleu.jpg" alt="Chaussures de volley femme">
-                <h3>Chaussures Femme</h3>
+                <h3>Chaussures Femme Bleu</h3>
                 <p>Conçues pour un maintien optimal.</p>
                 <span>70€</span>
-                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+                <button class="add-to-cart" data-name="Chaussures Femme Bleu" data-price="70">Ajouter au panier</button>
             </div>
             <div class="product" id="genouilleres">
                 <img src="images/genouilleres.jpg" alt="Genouillères">
                 <h3>Genouillères</h3>
                 <p>Protection essentielle pour vos genoux.</p>
                 <span>25€</span>
-                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+                <button class="add-to-cart" data-name="Genouillères" data-price="25">Ajouter au panier</button>
             </div>
             <div class="product" id="manchons">
                 <img src="images/manchons.jpg" alt="Manchons de volley">
                 <h3>Manchons de Volley</h3>
                 <p>Protection idéale pour les avant-bras.</p>
                 <span>20€</span>
-                <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
+                <button class="add-to-cart" data-name="Manchons" data-price="20">Ajouter au panier</button>
             </div>
         </div>
     </section>
 
     <a href="panier.html" class="cart-button">
-        <i class="fa-solid fa-cart-shopping"></i>
+        <img src="images/grocery-store.png" alt="grocery-store">
     </a>
     
 
@@ -103,6 +113,30 @@
         function closeMenu() {
             document.getElementById("menu").style.width = "0";
         }
+
+        // Stockage du panier dans le localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Fonction pour ajouter au panier
+        function addToCart(event) {
+            const button = event.target;
+            const name = button.getAttribute('data-name');
+            const price = parseFloat(button.getAttribute('data-price'));
+
+            if (!localStorage.getItem('loggedInUser')) {
+                alert('Vous devez être connecté pour ajouter un article au panier.');
+                return;
+            }
+
+            // Ajouter l'article au panier
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        // "Ajouter au panier"
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        addToCartButtons.forEach(button => button.addEventListener('click', addToCart));
+
     </script>
 </body>
 </html>
