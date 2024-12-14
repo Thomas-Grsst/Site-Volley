@@ -1,4 +1,7 @@
-/* Général */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -91,10 +94,58 @@ header.acc h1 {
     margin: 0;
 }
 
+/* Style spécifique pour la barre de recherche */
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#search-form input[type="text"] {
+    width: 70%;
+    padding: 10px 15px;
+    border: 2px solid hsl(45, 81%, 50%);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+#search-form input[type="text"]:focus {
+    border-color: hsl(45, 81%, 40%);
+    box-shadow: 0 0 8px hsl(45, 81%, 60%);
+}
+
+#search-form button {
+    padding: 10px 20px;
+    background-color: hsl(45, 81%, 50%);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: hsl(45, 81%, 40%);
+    box-shadow: 0 4px 10px hsl(45, 81%, 60%);
+}
+
+
+
+
 /* Produits */
 .products {
     padding: 2rem;
     background-color: #f4f4f4;
+}
+
+.products h1 {
+    text-align: center;
+    text-shadow: hsl(45, 81%, 50%) 0px 0px 10px;
 }
 
 .products h2 {
@@ -163,6 +214,47 @@ header.acc h1 {
 
 .cart-button:hover {
     background-color: hsl(45, 81%, 50%);
+}
+
+
+
+/* Champ de commentaire */
+#commentaires {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#comment-form textarea {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#comment-form button {
+    background-color: hsl(45, 81%, 50%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#comment-form button:hover {
+    background-color: hsl(45, 90%, 40%);
 }
 
 /* Footer général */

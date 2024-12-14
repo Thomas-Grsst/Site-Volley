@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-
     <!-- Menu latéral -->
     <div class="menu" id="menu">
         <button class="close-menu" onclick="closeMenu()">×</button>
@@ -29,7 +28,6 @@
         </nav>
     </div>
 
-    <!-- Bouton hamburger -->
     <button class="hamburger" onclick="openMenu()">☰</button>
 
     <!-- Contenu principal -->
@@ -39,52 +37,70 @@
         </div>
     </header>
 
-    <section id="products" class="products">
-        <h2>Nos Produits</h2>
+    <form id="search-form" class="search-bar">
+        <input type="text" id="search-input" placeholder="Recherchez un produit..." required>
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <section id="ballons" class="products">
+        <h1>Nos Produits</h1>
+        <h2>Ballons</h2>
         <div class="product-grid">
-            <div class="product" id="ballons">
+            <div class="product ballon">
                 <img src="images/ballonmikasa.jpg" alt="Ballon de volley pro">
                 <h3>Ballon de Volley (Pro)</h3>
-                <p>Idéal pour les entraînements et compétitions amateurs.</p>
+                <p>Conçu pour les matchs professionnels.</p>
                 <span>50€</span>
                 <button class="add-to-cart" data-name="Ballon de Volley (Pro)" data-price="50">Ajouter au panier</button>
             </div>
-            <div class="product">
+            <div class="product ballon">
                 <img src="images/ballonmolten.jpg" alt="Ballon de volley classique">
                 <h3>Ballon de Volley (Classique)</h3>
-                <p>Conçu pour les matchs professionnels.</p>
+                <p>Idéal pour les entraînements et compétitions amateurs.</p>
                 <span>30€</span>
                 <button class="add-to-cart" data-name="Ballon de Volley (Classique)" data-price="30">Ajouter au panier</button>
             </div>
-            <div class="product" id="chaussures">
+        </div>
+    </section>
+
+    <section class="products" id="chaussures">
+        <h2>Chaussures</h2>
+        <div class="product-grid">
+            <div class="product chaussure">
                 <img src="images/chaussuresblanc.jpg" alt="Chaussures de volley homme">
                 <h3>Chaussures Homme Blanche</h3>
                 <p>Performance et confort sur le terrain.</p>
                 <span>70€</span>
                 <button class="add-to-cart" data-name="Chaussures Homme Blanche" data-price="70">Ajouter au panier</button>
             </div>
-            <div class="product">
+            <div class="product chaussure">
                 <img src="images/chaussuresrouges.jpg" alt="Chaussures de volley mixte">
                 <h3>Chaussures Mixte Rouges</h3>
                 <p>Conçues pour un maintien optimal.</p>
                 <span>70€</span>
                 <button class="add-to-cart" data-name="Chaussures Mixte Rouges" data-price="70">Ajouter au panier</button>
             </div>
-            <div class="product">
+            <div class="product chaussure">
                 <img src="images/chaussuresbleu.jpg" alt="Chaussures de volley femme">
                 <h3>Chaussures Femme Bleu</h3>
-                <p>Conçues pour un maintien optimal.</p>
+                <p>Antidérapante et respirante.</p>
                 <span>70€</span>
                 <button class="add-to-cart" data-name="Chaussures Femme Bleu" data-price="70">Ajouter au panier</button>
             </div>
-            <div class="product" id="genouilleres">
+        </div>
+    </section>
+
+    <section class="products" id="genouilleres-manchons">
+        <h2>Genouillères et manchons</h2>
+        <div class="product-grid">
+            <div class="product genouillere">
                 <img src="images/genouilleres.jpg" alt="Genouillères">
                 <h3>Genouillères</h3>
                 <p>Protection essentielle pour vos genoux.</p>
                 <span>25€</span>
                 <button class="add-to-cart" data-name="Genouillères" data-price="25">Ajouter au panier</button>
             </div>
-            <div class="product" id="manchons">
+            <div class="product manchon">
                 <img src="images/manchons.jpg" alt="Manchons de volley">
                 <h3>Manchons de Volley</h3>
                 <p>Protection idéale pour les avant-bras.</p>
@@ -98,6 +114,13 @@
         <img src="images/grocery-store.png" alt="grocery-store">
     </a>
     
+    <section id="commentaires">
+        <h2>Laisser un commentaire</h2>
+        <form id="comment-form">
+            <textarea name="commentaire" rows="4" placeholder="Écrivez votre commentaire ici..." required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
 
     <footer>
         <h3 id="contact">Contactez-nous</h3>
@@ -105,38 +128,7 @@
         <p>© 2024 Volley Pro - Tous droits réservés</p>
     </footer>
 
-    <script>
-        function openMenu() {
-            document.getElementById("menu").style.width = "250px";
-        }
-
-        function closeMenu() {
-            document.getElementById("menu").style.width = "0";
-        }
-
-        // Stockage du panier dans le localStorage
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // Fonction pour ajouter au panier
-        function addToCart(event) {
-            const button = event.target;
-            const name = button.getAttribute('data-name');
-            const price = parseFloat(button.getAttribute('data-price'));
-
-            if (!localStorage.getItem('loggedInUser')) {
-                alert('Vous devez être connecté pour ajouter un article au panier.');
-                return;
-            }
-
-            // Ajouter l'article au panier
-            cart.push({ name, price });
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        // "Ajouter au panier"
-        const addToCartButtons = document.querySelectorAll('.add-to-cart');
-        addToCartButtons.forEach(button => button.addEventListener('click', addToCart));
-
-    </script>
+    <!-- Lien vers le fichier JS externe -->
+    <script src="script.js"></script>
 </body>
 </html>

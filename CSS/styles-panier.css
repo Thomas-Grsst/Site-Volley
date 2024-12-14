@@ -1,4 +1,8 @@
 /* Style général de la page panier */
+h1 {
+    text-align: center;
+}
+
 .cart-container {
     max-width: 800px;
     margin: 0 auto;
@@ -62,4 +66,25 @@
 
 #cart-summary button:hover {
     background-color: hsl(45, 81%, 50%);
+}
+
+
+#checkout-form {
+    text-align: center;
+    background-color: hsla(45, 81%, 50%, 0.700);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
